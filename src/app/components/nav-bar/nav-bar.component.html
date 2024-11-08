@@ -1,0 +1,45 @@
+
+
+<header class="fixed top-0 left-0 w-full z-50">
+    <nav class="p-5 bg-gradient-to-r from-[#160D64] to-[#2874FB] shadow py-2 md:flex md:items-center md:justify-between px-4 md:px-6">
+        <div class="flex justify-between items-center">
+            <span class="cursor-pointer" routerLink="/inicio">
+                <img class="w-16" src="/pd.png" alt="Logo de la empresa">
+            </span>
+        
+        
+            <span class="text-3xl cursor-pointer mx-2 md:hidden w-12 h-12 flex items-center justify-center p-2 rounded-md shadow-lg" style="background-color: rgba(22, 13, 100, 0.6);">
+                <ng-icon
+                     class="text-white"
+                     (click)="onToggleMenu()"
+                     [name]="currentIcon"
+                ></ng-icon>
+            </span>
+        </div>
+
+        
+            <ul [ngClass]="{'top-[70px] opacity-100': isMenuOpen, 'top-[-400px] opacity-0': !isMenuOpen}" 
+                class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 bg-white md:bg-transparent">
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-[#444444] md:text-white hover:bg-gray-200 hover:text-gray-700 px-4 py-2 rounded-md transition duration-300" routerLink="/inicio">Inicio</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-[#444444] md:text-white hover:bg-gray-200 hover:text-gray-700 px-4 py-2 rounded-md transition duration-300" routerLink="/nosotros">Nosotros</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-[#444444] md:text-white hover:bg-gray-200 hover:text-gray-700 px-4 py-2 rounded-md transition duration-300" routerLink="/servicios">Servicios</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-[#444444] md:text-white hover:bg-gray-200 hover:text-gray-700 px-4 py-2 rounded-md transition duration-300" routerLink="/clientes">Clientes</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-[#444444] md:text-white hover:bg-gray-200 hover:text-gray-700 px-4 py-2 rounded-md transition duration-300" routerLink="/cotizacion">Cotización</a>
+                </li>
+            </ul>         
+    </nav>
+</header>
+
+
+
+
+

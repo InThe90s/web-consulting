@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+  .hamburger-icon {
+    display: none;
+  }
+}
